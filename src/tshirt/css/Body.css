@@ -1,0 +1,279 @@
+.title {
+    display: flex;
+    color: gray;
+    text-align: left;
+    border-bottom: 2px solid lightgray;
+    padding: 5px;
+}
+
+.title small {
+    font-size: 6pt;
+    line-height: 27px;
+    padding: 3px;
+}
+
+.title::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: gray;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tatoo__border {
+    border: 5px dashed white;
+}
+
+.marks {
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    margin: 30px auto;
+    border-radius: 15px;
+    flex-direction: row;
+    background: whitesmoke;
+    flex: 1;
+}
+
+.resize__area {
+    overflow: auto;
+    overflow-y: hidden;
+    resize: both;
+    border: 2px dashed white !important;
+}
+
+.card .image {
+    position: relative;
+}
+
+.card .image img {
+    width: 100%;
+    filter: opacity(0.5) drop-shadow(0 0 0 #00f);
+}
+
+.card .image .img-label {
+    position: absolute;
+    left: 45%;
+    top: 18px;
+    width: 40px;
+    background: white;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 11pt;
+    opacity: 0.7;
+}
+
+.card .image .droparea {
+    width: 48%;
+    height: 44%;
+    border: dashed #aaa;
+    top: 23%;
+    left: 27%;
+    background-size: cover;
+    position: absolute;
+}
+
+.card .image .tatooarea {
+    width: 46%;
+    top: 25%;
+    left: 28%;
+    background-size: cover;
+    position: absolute;
+    border: none;
+}
+
+.tatoo__div {
+    width: 46%;
+    border: 2px dashed #aaa !important;
+    top: 27%;
+    left: 29%;
+    background-size: cover;
+    position: absolute;
+    border: none;
+}
+
+.buttons__container {
+    display: flex;
+    justify-content: center;
+}
+
+.active__move {
+    cursor: move;
+    user-select: none;
+}
+
+.card .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .container .marks {
+    flex-wrap: inherit;
+    padding: 0;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.tatoo__img {
+    visibility: hidden;
+    border: none;
+}
+
+header {
+    color: white;
+    position: absolute;
+    height: 88%;
+    width: 90%;
+}
+
+.card .container .marks img {
+    width: 100%;
+}
+
+.card .container .colors {
+    display: flex;
+}
+
+.card .container .colors .colorpick {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card .container .colors .colorpick li {
+    width: 35px;
+    height: 35px;
+    list-style: none;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card .container .colors .colorpick button.selected {
+    border: 3px solid #909090;
+}
+
+.card .container .sizes {
+    display: flex;
+}
+
+.card .container .sizes .sizepick {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-self: center;
+}
+
+.card .container .sizes .sizepick li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: gray;
+    display: flex;
+    padding: 3px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.card .container .sizes .sizepick li.selected {
+    border: 2px solid #333;
+}
+
+.card__container {
+    margin-top: 3% !important;
+}
+
+#border__none {
+    border: none;
+}
+
+.invertColor {
+    filter: invert(100%);
+}
+
+
+/* color picker section start */
+
+
+/* Responsive */
+
+.responsive .react-colorful {
+    width: auto;
+}
+
+
+/* Small */
+
+.small .react-colorful {
+    width: 120px;
+    height: 120px;
+}
+
+.small .react-colorful__hue {
+    height: 20px;
+}
+
+
+/* color picker section end */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1224px) {
+    .card .image .droparea {
+        width: 48%;
+        height: 34%;
+        border: dashed #aaa;
+        top: 15%;
+        left: 27%;
+        background-size: cover;
+        position: absolute;
+    }
+    .card .image .tatooarea {
+        width: 46%;
+        border: dashed #aaa;
+        top: 25%;
+        left: 29%;
+        background-size: cover;
+        position: absolute;
+        border: none;
+    }
+}
